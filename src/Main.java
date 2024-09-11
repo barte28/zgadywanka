@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -77,5 +74,16 @@ public class Main {
         elementy są unikatowe
         elementy nie są indeksowane
          */
+
+        LinkedList<Integer> trafione = new LinkedList<>();
+        //trafione to elementy które występują w wylosowanych i wpisanych
+        for (Integer wpisana: listaLiczbWpisanych){
+            if (zbiorLiczbLosowych.contains(wpisana)){
+                trafione.add(wpisana);
+            }
+        }
+        System.out.println("Trafione:"+trafione);
+
+
         }
     }
